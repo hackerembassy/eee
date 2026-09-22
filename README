@@ -1,0 +1,9 @@
+
+
+1. 
+add to /etc/configuration.nix
+
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+2. 
+to rebuild from flake
