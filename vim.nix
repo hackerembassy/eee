@@ -10,7 +10,7 @@
         start = [ vim-nix vim-lastplace ];
         opt = [];
       };
-      vimrcConfig.customRC = builtins.readFile ./.vimrc;
+      vimrcConfig.customRC = builtins.readFile ./vimrc;
     }
   )];
 }
