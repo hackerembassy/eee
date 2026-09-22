@@ -66,6 +66,8 @@
     HandleLidSwitchDocked = "ignore";
   };
 
+  systemd.sleep.settings.Sleep.AllowSuspend = "no";
+  
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
