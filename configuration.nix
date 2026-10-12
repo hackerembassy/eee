@@ -46,6 +46,9 @@
     xkb.layout = "us";
   };
 
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "hacker-chan";
+
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
@@ -77,11 +80,19 @@
     extraGroups = [ "wheel" "sudo" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
+  users.users.hacker-chan = {
+    isNormalUser = true;
+  };
+
   programs.firefox.enable = true;
-  programs.vscode.enable = true;
   programs.nix-ld.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+
+  environment.lxqt.excludePackages = with pkgs; [
+    lxqt.lxqt-powermanagement
+    xscreensaver
+  ];
 
 
   # Some programs need SUID wrappers, can be configured further or are

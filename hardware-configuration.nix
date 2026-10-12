@@ -21,7 +21,10 @@
   boot.kernelParams = [
     "processor.max_cstate=1"
     "intel_idle.max_cstate=1"
+    "pcie_aspm=off"
   ];
+  powerManagement.cpuFreqGovernor = "performance";
+
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/effd7369-49e5-4e3e-a466-02546220c2a6";
