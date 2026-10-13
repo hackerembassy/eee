@@ -21,9 +21,10 @@
   boot.kernelParams = [
     "processor.max_cstate=1"
     "intel_idle.max_cstate=1"
-    "pcie_aspm=off"
+    "pcie_aspm=off"  # ASPM fix
+    "idle=halt"      # power delivery fix (hard)
   ];
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "performance";  # power delivery fix (soft)
 
 
   fileSystems."/" =
