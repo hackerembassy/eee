@@ -75,7 +75,14 @@
 
   users.users.himura = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sudo" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "sudo" "networkmanager" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILCBzbGD8sf7I2WJs5HNbIV6/osQxrUCZKXkELORt4QC"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExXayUCTVpvcrB9GMB1Qes/0cBDrifdj5iZ9LBhtTYJ"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII8GLp4B53kPPpNt5c+FIOqmdgPhIgkMkt3s3vLA0jzq"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBh43317pq5H98m+tsV+1VdvWtf+MxEgeaOn3dDSfwWf"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBoTuFMPGE406FdB1OJk5O7Fj+/AlXRLgawbHanPSdGd"
+    ];
   };
 
   users.users.hacker-chan = {
