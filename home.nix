@@ -5,7 +5,15 @@
 
   home-manager.users."hacker-chan" = {
     home.file.".config/nixpkgs/config.nix".text = "{ allowUnfree = true; }";
-    home.file."Desktop/README.txt".text = "Use flatpak or `nix-shell -p <package>` if you need software from search.nixos.org";
+    home.file."Desktop/README.txt".text = ''
+Use `nix-shell -p <package>` if you need
+software from search.nixos.org
+
+Flatpak is also available!
+
+If you need help, open Telegram
+and write to @himura_kazuto
+'';
     programs.git = {
       enable = true;
       settings = {
