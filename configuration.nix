@@ -7,7 +7,7 @@
 {
   imports =
     [
-      # ./home.nix
+      ./home.nix
       ./vim.nix
       ./packages.nix
       ./hardware-configuration.nix
