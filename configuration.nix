@@ -7,7 +7,6 @@
 {
   imports =
     [
-      # ./options.nix
       # ./home.nix
       ./vim.nix
       ./packages.nix
@@ -22,7 +21,7 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  networking.hostName = "eee"; # Define your hostname.
+  networking.hostName = "eee";
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -74,7 +73,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.himura = {
     isNormalUser = true;
     extraGroups = [ "wheel" "sudo" "networkmanager" ]; # Enable ‘sudo’ for the user.
