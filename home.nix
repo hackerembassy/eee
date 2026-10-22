@@ -6,6 +6,16 @@
   home-manager.users."hacker-chan" = {
     home.file.".config/nixpkgs/config.nix".text = "{ allowUnfree = true; }";
     home.file."Desktop/README.txt".text = "Use flatpak or `nix-shell -p <package>` if you need software from search.nixos.org";
+    programs.git = {
+      enable = true;
+      settings = {
+        init.defaultBranch = "main";
+        user = {
+          name = "HackEm EeePC";
+          email = "hacker.embassy@proton.me";
+        };
+      };
+    };
     home.stateVersion = "26.05";
   };
 
