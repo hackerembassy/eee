@@ -10,6 +10,7 @@
   services.flatpak.enable = true;
 
   environment.systemPackages = with pkgs; [
+    featherpad
     telegram-desktop
     inter
     libreoffice
