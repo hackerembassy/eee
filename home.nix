@@ -6,13 +6,17 @@
   home-manager.users."hacker-chan" = {
     home.file.".config/nixpkgs/config.nix".text = "{ allowUnfree = true; }";
     home.file."Desktop/README.txt".text = ''
+
 Use `nix-shell -p <package>` if you need
-software from search.nixos.org
+extra software from https://search.nixos.org
 
 Flatpak is also available!
 
-If you need help, open Telegram
+For tech support open Telegram
 and write to @himura_kazuto
+
+The `configuration.nix` is here:
+https://github.com/hackerembassy/eee
 '';
     programs.git = {
       enable = true;
